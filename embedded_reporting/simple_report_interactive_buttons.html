@@ -27,7 +27,7 @@
 <script>
   function m(value) {
     document.getElementById("report1").innerHTML = "";
-    yellowfin.init().then(() => {
+    
         yellowfin.loadReport({
             reportId: '63027943-3be0-4812-9017-314f21cf0927',
             element: document.querySelector('#report1'),
@@ -39,17 +39,16 @@
         }).then(report => {
             console.log(report);
         });
-    })
+    
 };
 function a(){
     document.getElementById("report1").innerHTML = "";
-    yellowfin.init().then(() => {
-        yellowfin.loadReport({
+    yellowfin.loadReport({
             reportId: '63027943-3be0-4812-9017-314f21cf0927',
             element: document.querySelector('#report1'),
             showToolbar: false,            
         });
-    })
+    
 };
   yellowfin.init().then(() => {
 a();
