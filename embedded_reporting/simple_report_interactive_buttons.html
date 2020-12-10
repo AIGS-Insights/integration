@@ -25,6 +25,7 @@
 <script src="https://yf-emea-beta.yellowfin.bi/JsAPI/v3"></script>
 <!-- Yellowfin API Calls-->
 <script>
+  yellowfin.init().then(() => {
 function a(){
     document.getElementById("report1").innerHTML = "";
     yellowfin.init().then(() => {
@@ -52,6 +53,7 @@ function m(value) {
         });
     })
 };
+  });
 </script>
 </body>
 </html>
