@@ -25,19 +25,7 @@
 <script src="https://yf-emea-beta.yellowfin.bi/JsAPI/v3"></script>
 <!-- Yellowfin API Calls-->
 <script>
-  yellowfin.init().then(() => {
-function a(){
-    document.getElementById("report1").innerHTML = "";
-    yellowfin.init().then(() => {
-        yellowfin.loadReport({
-            reportId: '63027943-3be0-4812-9017-314f21cf0927',
-            element: document.querySelector('#report1'),
-            showToolbar: false,            
-        });
-    })
-};
-a();
-function m(value) {
+  function m(value) {
     document.getElementById("report1").innerHTML = "";
     yellowfin.init().then(() => {
         yellowfin.loadReport({
@@ -53,6 +41,19 @@ function m(value) {
         });
     })
 };
+  yellowfin.init().then(() => {
+function a(){
+    document.getElementById("report1").innerHTML = "";
+    yellowfin.init().then(() => {
+        yellowfin.loadReport({
+            reportId: '63027943-3be0-4812-9017-314f21cf0927',
+            element: document.querySelector('#report1'),
+            showToolbar: false,            
+        });
+    })
+};
+a();
+
   });
 </script>
 </body>
