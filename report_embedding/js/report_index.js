@@ -1,50 +1,21 @@
-var tasks = [{
+var tasks = [
+{
     title: "Simple Embedded Report",
     description: "Just a simple embed of a single report.",
+    img_url:"",
+    page_url:"",   
+},
+{
+    title: "Advanced Embedded Report",
+    description: "This uses the advanced method of embedding a single report.",
+    img_url:"",
+    page_url:"",   
+},
+{
+    title: "Embedded report with External Buttons submitting filters",
+    description: "An embedded report with buttons in the parent site which submit the filter values on click.",
     img_url:"../assets/img/report_thumb/Interactive_filter.PNG",
     page_url:"../report_embedding/content/simple_report_interactive_buttons.html",   
-},
-{
-    title: "Simple Embedded Report",
-    description: "Just a simple embed of a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
 }
 ];
 let cardContainer;
