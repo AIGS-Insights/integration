@@ -9,7 +9,7 @@ var tasks = [
     title: "Advanced Embedded Report",
     description: "This uses the advanced method of embedding a single report.",
     img_url:"",
-    page_url:"",   
+    page_url:"../report_embedding/content/advanced_report.html",   
 },
 {
     title: "Embedded report with External Buttons submitting filters",
