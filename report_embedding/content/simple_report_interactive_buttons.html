@@ -109,6 +109,68 @@
                 </div>
             </div>
         </section>
+        <section class="page-section bg-primary" id="about">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                      <h2 class="text-white mt-0  text-center">The code needed to do this yourself</h2>
+                      <hr class="divider light my-4" />
+                     
+                        <pre>
+                        <code>
+&lt;script src="https://[yourYellowfinInstallURLAndPort]/JsAPI/v3"&gt;&lt;/script&gt;                          
+&lt;div class="button-group"&gt;
+  &lt;button id='Rel' class="btn btn-success"  value='All' onClick="a()"&gt;All&lt;/button&gt;
+  &lt;button id='Adv' class="btn btn-success" value='Adventure' onClick="m(this.value)"&gt;Adventure&lt;/button&gt;
+    &lt;button id='Rel' class="btn btn-success"  value='Relaxation' onClick="m(this.value)"&gt;Relaxation&lt;/button&gt;
+    &lt;button id='Rel' class="btn btn-success"  value='Family' onClick="m(this.value)"&gt;Family&lt;/button&gt;
+    &lt;button id='Rel' class="btn btn-success"  value='Culture' onClick="m(this.value)"&gt;Culture&lt;/button&gt;
+    &lt;button id='Rel' class="btn btn-success"  value='Luxury' onClick="m(this.value)"&gt;Luxury&lt;/button&gt;
+    &lt;button id='Rel' class="btn btn-success"  value='Sport' onClick="m(this.value)"&gt;Sport&lt;/button&gt;
+ 
+&lt;/div&gt;
+    
+&lt;div id="report1"&gt;&lt;/div&gt;
+
+&lt;script src="https://yf-emea-beta.yellowfin.bi/JsAPI/v3"&gt;&lt;/script&gt;
+&lt;!-- Yellowfin API Calls--&gt;
+&lt;script&gt;
+  function m(value) {
+    document.getElementById("report1").innerHTML = "";
+    
+        yellowfin.loadReport({
+            reportId: '63027943-3be0-4812-9017-314f21cf0927',
+            element: document.querySelector('#report1'),
+            showToolbar: false,
+            filterValues: [{
+                filterId: 'Demographic',
+                valueList: [value]
+            }]     
+        }).then(report =&gt; {
+            console.log(report);
+        });
+    
+};
+function a(){
+    document.getElementById("report1").innerHTML = "";
+    yellowfin.loadReport({
+            reportId: '63027943-3be0-4812-9017-314f21cf0927',
+            element: document.querySelector('#report1'),
+            showToolbar: false,            
+        });
+    
+};
+  yellowfin.init().then(() =&gt; {
+a();
+  });
+&lt;/script>
+                        </code>
+                      </pre>
+                      
+                  </div>
+              </div>
+          </div>
+      </section>
         <!-- Call to action-->
         <section class="page-section bg-dark text-white" id='portfolio'>
             <div class="container text-center">

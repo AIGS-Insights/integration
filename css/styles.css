@@ -207,8 +207,7 @@ samp {
 pre {
   margin-top: 0;
   margin-bottom: 1rem;
-  overflow: auto;
-  -ms-overflow-style: scrollbar;
+  overflow: visible;
 }
 
 figure {
@@ -563,7 +562,7 @@ kbd kbd {
 pre {
   display: block;
   font-size: 87.5%;
-  color: #212529;
+  color: #fafafa;
 }
 pre code {
   font-size: inherit;
