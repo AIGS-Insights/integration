@@ -183,6 +183,9 @@ a:hover {
   color: #d6370c;
   text-decoration: underline;
 }
+a.areas_link {
+  color: currentcolor;
+}
 
 a:not([href]):not([class]) {
   color: inherit;

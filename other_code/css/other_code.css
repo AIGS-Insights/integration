@@ -1,0 +1,32 @@
+img.thumb_image {
+  display: inline-block;
+  width: 25%;
+  height: 30%;
+  vertical-align: top;
+}
+.card-title {
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.card-description {
+  display: inline-block;
+  width: 70%;
+  height: 50%;
+}
+a.card-url-link {
+  color: #605e52;
+  text-decoration: none;
+}
+a.card-url-link:hover {
+  color: #605e52;
+  text-decoration: none;
+}
+a.card-url-link:hover > .card.shadow.cursor-pointer {
+  box-shadow: 5px -5px 15px 0px #9e9e9e !important;
+}
+.card.shadow.cursor-pointer {
+  margin-bottom: 2%;
+}
+.shadow {
+  box-shadow: 5px 5px 15px 0px #9e9e9e !important;
+}
