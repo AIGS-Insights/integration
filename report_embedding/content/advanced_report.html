@@ -6,8 +6,6 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Yellowfin BI | Report Embedding</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -74,9 +72,8 @@
             yellowfin.init().then(() => {
                 yellowfin.loadReport({
                     reportUUID: "63027943-3be0-4812-9017-314f21cf0927",
-                  }).then({   
-                      element: document.querySelector("div#report1"),
-                    });
+                    element: document.querySelector("div#report1"),
+                });
             });
 
             </script>
@@ -101,9 +98,8 @@
    yellowfin.init().then(() => {
         yellowfin.loadReport({
             reportUUID: "63027943-3be0-4812-9017-314f21cf0927",
-        }).then({   
-            element: document.querySelector("div#report1"),
-            });
+            element: document.querySelector("div#report1")
+        });
         });
 
 &lt;/script&gt;
