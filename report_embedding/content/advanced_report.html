@@ -21,7 +21,7 @@
     </head>
     <body id="page-top">
         <style>
-        .embed_container{width:100%;}
+        .embed_container{width:100%; margin:auto;}
         .button-group button{margin:2px;} 
         .button-group{margin: auto;width: 21%;padding: 10px;} 
         div#report1{display: block;min-height: 350px; }   
@@ -62,24 +62,26 @@
             </div>
         </section>
         <!-- Services-->
-        <div class="embed_container">
+        <div class="container">
                
            <div id="report1"></div>
-            
-            <script src="https://yf-emea-beta.yellowfin.bi/JsAPI/v3"></script>
-            <!-- Yellowfin API Calls-->
-            <script>
-            yellowfin.init().then(() => {
-                yellowfin.loadReport({
-                    reportUUID: "63027943-3be0-4812-9017-314f21cf0927",
-                    element: document.querySelector("div#report1"),
-                });
-            });
-
-            </script>
+           
            
               </div>
           </div>
+           
+          <script src="https://yf-emea-beta.yellowfin.bi/JsAPI/v3"></script>
+          <!-- Yellowfin API Calls-->
+          <script>
+          yellowfin.init().then(() => {
+              yellowfin.loadReport({
+                  reportUUID: "63027943-3be0-4812-9017-314f21cf0927",
+                  element: document.querySelector("div#report1"),
+                  width: 700px;
+              });
+          });
+
+          </script>
         </section>
         <section class="page-section bg-primary" id="about">
           <div class="container">
