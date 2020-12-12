@@ -1,9 +1,9 @@
 var tasks = [
 {
     title: "Simple Embedded Report",
-    description: "Just a simple embed of a single report.",
+    description: "A report embedded using the 'simple' method.",
     img_url:"",
-    page_url:"",   
+    page_url:"../report_embedding/content/simple_report.html",   
 },
 {
     title: "Advanced Embedded Report",
