@@ -12,6 +12,7 @@ img.thumb_image {
   display: inline-block;
   width: 70%;
   height: 50%;
+  padding: 2%;
 }
 a.card-url-link {
   color: #605e52;
