@@ -2,17 +2,17 @@ var tasks = [
 {
     title: "Simple Embedded Report",
     description: "A report embedded using the 'simple' method.",
-    img_url:"",
+    img_url:"../assets/img/report_thumb/simple_report.PNG",
     page_url:"../report_embedding/content/simple_report.html",   
 },
 {
     title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
+    description: "A report embedded using the 'advanced' method.",
+    img_url:"../assets/img/report_thumb/advanced_method.PNG",
     page_url:"../report_embedding/content/advanced_report.html",   
 },
 {
-    title: "Embedded report with External Buttons submitting filters",
+    title: "Embedded report with buttons submitting the filters",
     description: "An embedded report with buttons in the parent site which submit the filter values on click.",
     img_url:"../assets/img/report_thumb/Interactive_filter.PNG",
     page_url:"../report_embedding/content/simple_report_interactive_buttons.html",   
