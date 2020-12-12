@@ -2,7 +2,7 @@ var tasks = [{
     title: "Simple Embedded Report",
     description: "Just a simple embed of a single report.",
     img_url:"https://smartlogic.io/images/brand-assets/smartlogic-seal-teal-vector.svg",
-    page_url:"../report_embedding/simple_report_interactive_buttons.html",   
+    page_url:"../report_embedding/content/simple_report_interactive_buttons.html",   
 },
 {
     title: "Simple Embedded Report",
