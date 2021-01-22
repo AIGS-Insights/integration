@@ -1,50 +1,9 @@
-var tasks = [{
+var tasks = [
+{
     title: "ITSM Support Tickets Analysis",
     description: "A dashboard to showcase a fictional companies ITSM Support tickets.",
     img_url:"../assets/img/project_thumb/GlobexCorp.PNG",
     page_url:"../projects/content/globexcorp.html",   
-},
-{
-    title: "Simple Embedded Report",
-    description: "Just a simple embed of a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
 }
 ];
 let cardContainer;
