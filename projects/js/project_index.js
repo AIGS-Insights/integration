@@ -1,7 +1,7 @@
 var tasks = [{
     title: "ITSM Support Tickets Analysis",
     description: "A dashboard to showcase a fictional companies ITSM Support tickets.",
-    img_url:"../assets/img/report_thumb/GlobexCorp.PNG",
+    img_url:"../assets/img/project_thumb/GlobexCorp.PNG",
     page_url:"../projects/content/globexcorp.html",   
 },
 {
