@@ -66,15 +66,17 @@
         <!-- Services-->
         <section class="page-section" id="">     
         <div id="dashboardGlobex"></div>
-        <script>    
+        <script>  
+        yellowfin.init().then(() => {  
            yellowfin.loadDashboard({
             dashboardUUID: "20042784-0951-4a47-aae9-4fbe7534abd0",
             element: document.querySelector("div#dashboardGlobex"),
             showToolbar: false,
           });
+        });
         </script>
-        &amp;filter499bf24f-3d94-4d5d-9ec3-4c3bdbfe754f=2020-08-01%7C2020-12-31&amp;filter09bf96b9-7364-45b4-a76a-aca34af664f4=16.0&amp;filter4371a12c-ad17-4c4c-b04e-d5ffd8723ac2=2020-11-08
-        </div>
+     <!--   &amp;filter499bf24f-3d94-4d5d-9ec3-4c3bdbfe754f=2020-08-01%7C2020-12-31&amp;filter09bf96b9-7364-45b4-a76a-aca34af664f4=16.0&amp;filter4371a12c-ad17-4c4c-b04e-d5ffd8723ac2=2020-11-08
+     --></div>
         </section>
         <section class="page-section bg-primary" id="about">
           <div class="container">
