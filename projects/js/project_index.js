@@ -1,8 +1,8 @@
 var tasks = [{
-    title: "Simple Embedded Report",
-    description: "Just a simple embed of a single report.",
-    img_url:"https://smartlogic.io/images/brand-assets/smartlogic-seal-teal-vector.svg",
-    page_url:"../report_embedding/simple_report_interactive_buttons.html",   
+    title: "ITSM Support Tickets Analysis",
+    description: "A dashboard to showcase a fictional companies ITSM Support tickets.",
+    img_url:"../assets/img/report_thumb/GlobexCorp.PNG",
+    page_url:"../projects/content/globexcorp.html",   
 },
 {
     title: "Simple Embedded Report",
