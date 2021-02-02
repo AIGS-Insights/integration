@@ -4,7 +4,7 @@ var tasks = [
     description: "A dashboard to showcase a fictional companies ITSM Support tickets.",
     img_url:"../assets/img/project_thumb/GlobexCorp.PNG",
     page_url:"../projects/content/globexcorp.html",   
-}
+},
 {
     title: "Liquorio - World Class Spirits & Liqueurs",
     description: "",
