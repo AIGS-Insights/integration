@@ -5,6 +5,12 @@ var tasks = [
     img_url:"../assets/img/project_thumb/GlobexCorp.PNG",
     page_url:"../projects/content/globexcorp.html",   
 }
+{
+    title: "Liquorio - World Class Spirits & Liqueurs",
+    description: "",
+    img_url:"../assets/img/project_thumb/liquorio.PNG",
+    page_url:"../projects/content/liquorio.html",   
+}
 ];
 let cardContainer;
 
