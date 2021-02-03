@@ -2,7 +2,7 @@ var tasks = [{
     title: "Simple Embedded Dashboard",
     description: "Just a simple embed of a single dashboard.",
     img_url:"../assets/img/dashboard_thumb/simple_dashboard.PNG",
-    page_url:"../dashboard_embedding/simple_dashboard.html",   
+    page_url:"../dashboard_embedding/content/simple_dashboard.html",   
 }
 ];
 let cardContainer;
