@@ -1,50 +1,8 @@
 var tasks = [{
-    title: "Simple Embedded Report",
-    description: "Just a simple embed of a single report.",
-    img_url:"https://smartlogic.io/images/brand-assets/smartlogic-seal-teal-vector.svg",
-    page_url:"../report_embedding/simple_report_interactive_buttons.html",   
-},
-{
-    title: "Simple Embedded Report",
-    description: "Just a simple embed of a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
-},
-{
-    title: "Advanced Embedded Report",
-    description: "This uses the advanced method of embedding a single report.",
-    img_url:"",
-    page_url:"",   
+    title: "Simple Embedded Dashboard",
+    description: "Just a simple embed of a single dashboard.",
+    img_url:"../assets/img/dashboard_thumb/simple_dashboard.PNG",
+    page_url:"../dashboard_embedding/simple_dashboard.html",   
 }
 ];
 let cardContainer;
