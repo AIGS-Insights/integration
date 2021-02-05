@@ -65,7 +65,9 @@
         </section>
         <!-- Services-->
         <section class="page-section" id="simple">   
-            <div id="dashboard"> 
+            <script src="https://yf-emea-beta.yellowfin.bi/JsAPI/v3"></script>
+        
+            <div id="dashboard"> </div> 
             <script>
                 yellowfin.init().then(() => {
                     yellowfin.loadDashboard({
@@ -75,10 +77,9 @@
                     });
                 });    
             </script>
-            </div> 
+            
         </div>
         </section>
-        <script src="https://yf-emea-beta.yellowfin.bi/JsAPI/v3"></script>
         <section class="page-section bg-primary" id="about">
           <div class="container">
               <div class="row justify-content-center">
