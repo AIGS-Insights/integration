@@ -3,6 +3,12 @@ var tasks = [{
     description: "Just a simple embed of a single dashboard.",
     img_url:"../assets/img/dashboard_thumb/simple_dashboard.PNG",
     page_url:"../dashboard_embedding/content/simple_dashboard.html",   
+},
+{
+    title: "Advanced Embedded Dashboard",
+    description: "Embedding a dashboard using the advanced method",
+    img_url:"../assets/img/dashboard_thumb/simple_dashboard.PNG",
+    page_url:"../dashboard_embedding/content/advanced_dashboard.html",   
 }
 ];
 let cardContainer;
