@@ -9,7 +9,7 @@ function createBreadcrumb(breadcrumbElement, report) {
     //We can retrieve the filters API from the report. 
     let filters = report.filters;
     
-    //Use the filters forEach function to iterate 
+//Use the filters forEach function to iterate 
     filters.forEach(filter => {
         //Clone the example node
         let element = example.cloneNode(true);
@@ -19,15 +19,19 @@ function createBreadcrumb(breadcrumbElement, report) {
         
         //Add the applied values to the filterValues div
         element.querySelector('.filterValues').innerText = getDisplayValue(filter);
+        
         filter.addEventListener('changed', function(event) {
-            element.classList.addClass('updated');
+            element.classList.add('updated');
         });
+        
         filter.addEventListener('applied', function(event) {
-            element.classList.removeClass('updated');
-            element.querySelector('.filterValues').innerText = getDisplayValue(filter);	
-        })
+            element.classList.remove('updated');
+            element.querySelector('.filterValues').innerText = getDisplayValue(filter);
+        });
+        
         //Finally append the filter element to the breadcrumb element
         breadcrumbElement.appendChild(element);
+
     });
     
 }
