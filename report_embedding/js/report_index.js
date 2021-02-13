@@ -28,6 +28,12 @@ var tasks = [
     description: "See how to remove the display toggle from a report or chart do stop users from switching between chart visualisations and the data table.",
     img_url:"../assets/img/report_thumb/remove_toggle.PNG",
     page_url:"../report_embedding/content/remove_toggle.html",   
+},
+{
+    title: "Removing the toolbar from reports and charts",
+    description: "See how to remove the toolbar from any embedded report or chart.",
+    img_url:"../assets/img/report_thumb/remove_toolbar.PNG",
+    page_url:"../report_embedding/content/remove_toolbar.html",   
 }
 ];
 let cardContainer;
