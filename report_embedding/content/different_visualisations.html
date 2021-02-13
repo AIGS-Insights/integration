@@ -23,7 +23,7 @@
         .embed_container{width:100%; margin:auto;}
         .button-group button{margin:2px;} 
         .button-group{margin: auto;width: 21%;padding: 10px;} 
-        div#report1{display: block;min-height: 350px; margin: 4%;}   
+        div#reportContainer{display: block;min-height: 350px; margin: 4%;}   
         div.report{width: 100%;margin: auto;margin-top: -5%;}
         #reportContainer app-report {width:700px;height:700px;	}
 
@@ -73,8 +73,7 @@
           <script src="https://yf-emea-beta.yellowfin.bi/JsAPI/v3"></script>
           <!-- Yellowfin API Calls-->
           <script>
-        yellowfin.init().then(() => {    
-            console.log('In the init')  
+        yellowfin.init().then(() => { 
             /*
             We are still going to use yellowfin.loadReport to load the report,
             however we don't want to have it render automatically so we won't pass
