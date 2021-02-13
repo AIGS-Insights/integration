@@ -100,20 +100,34 @@
                      
                         <pre>
                         <code>
+&lt;div class="container"&gt;
 
 &lt;div id="report1"&gt;&lt;/div&gt;
-            
-&lt;script src="https://[yourYellowfinInstallURLAndPort]/JsAPI/v3"&gt;&lt;/script&gt;            
+
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script src="https://yf-emea-beta.yellowfin.bi/JsAPI/v3"&gt;&lt;/script&gt;
+&lt;!-- Yellowfin API Calls--&gt;
 &lt;script&gt;
-   yellowfin.init().then(() => {
-        yellowfin.loadReport({
-            reportUUID: "63027943-3be0-4812-9017-314f21cf0927",
-            element: document.querySelector("div#report1")
-        });
-        });
+yellowfin.init().then(() =&gt; {
+    yellowfin.loadReport({
+        reportUUID: "9044e929-b25a-4843-9a68-8dd3001b4159",
+        displayType: "CHART",
+        element: document.querySelector("div#report1"),
+        showDisplayToggle: false
+    });
+    yellowfin.loadReport({
+        reportUUID: "9044e929-b25a-4843-9a68-8dd3001b4159",
+        displayType:"REPORT",
+        element: document.querySelector("div#report1"),
+        showDisplayToggle: false
+        
+    });
+});
 
 &lt;/script&gt;
-
                         </code>
                       </pre>
                       
