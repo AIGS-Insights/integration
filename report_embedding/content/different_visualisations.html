@@ -73,26 +73,27 @@
           <script src="https://yf-emea-beta.yellowfin.bi/JsAPI/v3"></script>
           <!-- Yellowfin API Calls-->
           <script>
-        yellowfin.init().then(() => {      
+        yellowfin.init().then(() => {    
+            console.log('In the init')  
             /*
             We are still going to use yellowfin.loadReport to load the report,
             however we don't want to have it render automatically so we won't pass
             it an "element" attribute. We will use that after
             */
             yellowfin.loadReport({
-                reportUUID: 'af753669-7f2e-4aa6-8474-ee8e6c92e0dc',
+                reportUUID: "af753669-7f2e-4aa6-8474-ee8e6c92e0dc",
             }).then(report => {
                 //Gets the list of charts on the report
                 let charts = report.charts; 
                 //Get the reportContainer so we can render these elements into it.
-                let element = document.querySelector('#reportContainer');
+                let element = document.querySelector("#reportContainer");
                 
                 /*Iterating through the charts and create a report element for each
                 of the charts. */
-                
+
                 Object.values(charts).forEach(chart => {
                     report.createReportElement({
-                        displayType: 'CHART',
+                        displayType: "CHART",
                         chartUUID: chart.uuid,
                         element: element,
                     });
@@ -102,7 +103,7 @@
                     Create a report element which displays the table.
                 */
                 report.createReportElement({
-                    displayType:'REPORT',
+                    displayType:"REPORT",
                     element: element,
                 });
             });
