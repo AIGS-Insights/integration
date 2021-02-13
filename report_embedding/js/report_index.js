@@ -34,7 +34,13 @@ var tasks = [
     description: "See how to remove the toolbar from any embedded report or chart.",
     img_url:"../assets/img/report_thumb/remove_toolbar.PNG",
     page_url:"../report_embedding/content/remove_toolbar.html",   
-}
+},
+{
+    title: "Creating a filter breadcrumb with the filterAPI",
+    description: "Ths JsAPI Example report has two filters within it, we are going to use the “applied” filter events on these filters to create a series of elements which display which filter is currently applied to the report. From a user perspective what this means is that every time a filter value is applied to this report, the value will show up in the “breadcrumb” across the top, so we can easily display what is being applied.",
+    img_url:"../assets/img/report_thumb/filter_breadcrumb.PNG",
+    page_url:"../report_embedding/content/filter_breadcrumb.html",   
+},
 ];
 let cardContainer;
 
