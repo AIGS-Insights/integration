@@ -19,7 +19,9 @@ function createBreadcrumb(breadcrumbElement, report) {
         
         //Add the applied values to the filterValues div
         element.querySelector('.filterValues').innerText = getDisplayValue(filter);
-        
+        filter.addEventListener('changed', function(event) {
+            element.classList.addClass('updated');
+        });
         
         //Finally append the filter element to the breadcrumb element
         breadcrumbElement.appendChild(element);
