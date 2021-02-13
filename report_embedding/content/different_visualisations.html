@@ -120,20 +120,52 @@
                      
                         <pre>
                         <code>
-
-&lt;div id="report1"&gt;&lt;/div&gt;
-            
-&lt;script src="https://[yourYellowfinInstallURLAndPort]/JsAPI/v3"&gt;&lt;/script&gt;            
-&lt;script>
-   yellowfin.init().then(() => {
-        yellowfin.loadReport({
-            reportUUID: "63027943-3be0-4812-9017-314f21cf0927",
-            element: document.querySelector("div#report1")
-        });
-        });
-
-&lt;/script&gt;
-
+                            &lt;div class="container"&gt;
+               
+                            &lt;div id="reportContainer"&gt;&lt;/div&gt;
+                            
+                            
+                               &lt;/div&gt;
+                           &lt;/div&gt;
+                            
+                           &lt;script src="https://[yourYellowfinInstallURLAndPort]/JsAPI/v3"&gt;&lt;/script&gt;
+                           &lt;!-- Yellowfin API Calls--&gt;
+                           &lt;script&gt;
+                         yellowfin.init().then(() =&gt; { 
+                             /*
+                             We are still going to use yellowfin.loadReport to load the report,
+                             however we don't want to have it render automatically so we won't pass
+                             it an "element" attribute. We will use that after
+                             */
+                             yellowfin.loadReport({
+                                 reportUUID: "92b18f8d-ae7d-4684-bdbb-d2cab9bf2fc4",
+                             }).then(report =&gt; {
+                                 //Gets the list of charts on the report
+                                 let charts = report.charts; 
+                                 //Get the reportContainer so we can render these elements into it.
+                                 let element = document.querySelector("#reportContainer");
+                                 
+                                 /*Iterating through the charts and create a report element for each
+                                 of the charts. */
+                 
+                                 Object.values(charts).forEach(chart =&gt; {
+                                     report.createReportElement({
+                                         displayType: "CHART",
+                                         chartUUID: chart.uuid,
+                                         element: element,
+                                     });
+                                 });
+                                 
+                                 /*
+                                     Create a report element which displays the table.
+                                 */
+                                 report.createReportElement({
+                                     displayType:"REPORT",
+                                     element: element,
+                                 });
+                             });
+                         });
+                         &lt;/script&gt;
                         </code>
                       </pre>
                       
