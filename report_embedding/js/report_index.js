@@ -20,7 +20,7 @@ var tasks = [
 {
     title: "Display Different Visualisations from the same report",
     description: "The Example JsAPI Report has 2 different charts on it, as well as a table and a canvas. The above loadReport call will load and display the canvas by default. In this case we just want to display the 2 charts and the table at the same time, but we don’t want to display the canvas",
-    img_url:"../assets/img/report_thumb/Interactive_filter.PNG",
+    img_url:"../assets/img/report_thumb/different_visualisations.PNG",
     page_url:"../report_embedding/content/different_visualisations.html",   
 }
 ];
