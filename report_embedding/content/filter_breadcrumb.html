@@ -63,7 +63,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">Embedded report using the advanced method</h2>
+                        <h2 class="text-white mt-0">Creating a filter breadcrumb with the filterAPI"</h2>
                         <hr class="divider light my-4" />
                         <p class="text-white-50 mb-4"></p>
                     </div>
@@ -105,26 +105,116 @@
                   <div class="col-lg-8">
                       <h2 class="text-white mt-0  text-center">The code you need to do this yourself</h2>
                       <hr class="divider light my-4" />
-                     
+ <h3>Front End Content</h3>                    
                         <pre>
                         <code>
 
-&lt;div id="report1"&gt;&lt;/div&gt;
-            
-&lt;script src="https://[yourYellowfinInstallURLAndPort]/JsAPI/v3"&gt;&lt;/script&gt;            
+&lt;div class="container"&gt;
+&lt;div id="breadcrumbContainer"&gt;&lt;/div&gt;     
+&lt;div id="reportContainer"&gt;&lt;/div&gt;
+
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script src="/report_embedding/js/filters_breadcrumb.js"&gt;&lt;/script&gt; 
+&lt;script src="https://yf-emea-beta.yellowfin.bi/JsAPI/v3"&gt;&lt;/script&gt;
+&lt;!-- Yellowfin API Calls--&gt;
 &lt;script&gt;
-   yellowfin.init().then(() => {
-        yellowfin.loadReport({
-            reportUUID: "63027943-3be0-4812-9017-314f21cf0927",
-            element: document.querySelector("div#report1")
+yellowfin.init().then(() =&gt; {
+    yellowfin.loadReport({
+        reportUUID: "9044e929-b25a-4843-9a68-8dd3001b4159",
+        
+    }).then(report=&gt;{
+        report.createReportElement({
+        displayType: 'REPORT',
+        element: document.querySelector("div#reportContainer"),
+        height: "500px",
         });
-        });
+        createBreadcrumb(document.querySelector('#breadcrumbContainer'), report);
+    });
+    
+});
 
 &lt;/script&gt;
 
                         </code>
                       </pre>
-                      
+                      <h3>Supporting JS file Content</h3>                    
+                      <pre>
+                      <code>
+function createBreadcrumb(breadcrumbElement, report) {
+    //Create a div that we will be cloning for each filter that is present within a list
+    let example = document.createElement('div');
+    example.className = 'breadcrumb_example';
+    example.innerHTML = '&lt;div class="filterName"&gt;&lt;/div&gt;'+':&nbsp;'+ '&lt;div class="filterValues"&gt;&lt;/div&gt;';
+    /*+
+        '&lt;div class="filterClear"&gt;Clear&lt;/div&gt;';
+        */
+    //We can retrieve the filters API from the report. 
+    let filters = report.filters;
+    
+//Use the filters forEach function to iterate 
+    filters.forEach(filter => {
+        //Clone the example node
+        let element = example.cloneNode(true);
+        
+        //Add the filterName to the div with the class .filterName
+        element.querySelector('.filterName').innerText = filter.name;
+        
+        //Add the applied values to the filterValues div
+        element.querySelector('.filterValues').innerText = getDisplayValue(filter);
+        
+        filter.addEventListener('changed', function(event) {
+            element.classList.add('updated');
+        });
+        
+        filter.addEventListener('applied', function(event) {
+            element.classList.remove('updated');
+            element.querySelector('.filterValues').innerText = getDisplayValue(filter);
+        });
+        
+        //Finally append the filter element to the breadcrumb element
+        breadcrumbElement.appendChild(element);
+
+    });
+    
+}
+
+function valuesApplied(filter) {
+    let appliedValues = filter.appliedValues || {};
+    if(filter.list) {
+        //If the filter is a list filter, the list should no be null and should have a length of > 0 to be considered set
+        return appliedValues.valueList && appliedValues.valueList.length > 0;
+    } else {
+        //Use the !! operation to convert valueOne into a boolean
+        let set = !!appliedValues.valueOne;
+        if(set && filter.between) {
+            //If valueOne is set, then do the same to valueTwo
+            set = !!appliedValues.valueTwo;
+        }
+        
+        return set;
+    }
+}
+
+
+function getDisplayValue(filter) {
+    if(!valuesApplied(filter)) {
+        return "No Values Set";
+    }
+    if(filter.list) {
+        return filter.appliedValueList.join(', ');
+    } else {
+        let str = filter.appliedValueOne;
+        if(filter.between) {
+            str += " - " + filter.appliedValueTwo;
+        }
+        return str;
+    }
+}
+
+                      </code>
+                    </pre>                      
                   </div>
               </div>
           </div>
