@@ -16,6 +16,12 @@ var tasks = [
     description: "An embedded report with buttons in the parent site which submit the filter values on click.",
     img_url:"../assets/img/report_thumb/Interactive_filter.PNG",
     page_url:"../report_embedding/content/simple_report_interactive_buttons.html",   
+},
+{
+    title: "Display Different Visualisations from the same report",
+    description: "The Example JsAPI Report has 2 different charts on it, as well as a table and a canvas. The above loadReport call will load and display the canvas by default. In this case we just want to display the 2 charts and the table at the same time, but we don’t want to display the canvas",
+    img_url:"../assets/img/report_thumb/Interactive_filter.PNG",
+    page_url:"../report_embedding/content/different_visualisations.html",   
 }
 ];
 let cardContainer;
