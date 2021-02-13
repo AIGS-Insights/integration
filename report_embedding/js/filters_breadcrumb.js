@@ -2,7 +2,7 @@ function createBreadcrumb(breadcrumbElement, report) {
     //Create a div that we will be cloning for each filter that is present within a list
     let example = document.createElement('div');
     example.className = 'breadcrumb_example';
-    example.innerHTML = '<div class="filterName"></div>'+ '<div class="filterValues"></div>';
+    example.innerHTML = '<div class="filterName"></div>'+':&nbsp;&nbsp;'+ '<div class="filterValues"></div>';
     /*+
         '<div class="filterClear">Clear</div>';
      */
