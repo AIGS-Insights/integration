@@ -87,10 +87,9 @@
                 //Get the reportContainer so we can render these elements into it.
                 let element = document.querySelector('#reportContainer');
                 
-                /*
-                    Iterating through the charts and create a report element for each
-                    of the charts.
-                */
+                /*Iterating through the charts and create a report element for each
+                of the charts. */
+                
                 Object.values(charts).forEach(chart => {
                     report.createReportElement({
                         displayType: 'CHART',
