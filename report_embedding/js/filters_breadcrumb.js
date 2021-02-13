@@ -15,7 +15,7 @@ function createBreadcrumb(breadcrumbElement, report) {
         let element = example.cloneNode(true);
         
         //Add the filterName to the div with the class .filterName
-        element.querySelector('.filterName').innerText = filter.name + ":&nbsp;&nbsp;";
+        element.querySelector('.filterName').innerText = filter.name + ": ";
         
         //Add the applied values to the filterValues div
         element.querySelector('.filterValues').innerText = getDisplayValue(filter);
