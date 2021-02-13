@@ -22,6 +22,12 @@ var tasks = [
     description: "The Example JsAPI Report has 7 different charts on it, as well as a table and a canvas. The above loadReport call will load and display the canvas by default. In this case we just want to display the 2 charts and the table at the same time, but we don’t want to display the canvas",
     img_url:"../assets/img/report_thumb/different_visualisations.PNG",
     page_url:"../report_embedding/content/different_visualisations.html",   
+},
+{
+    title: "Removing the Display Toggle from reports and charts",
+    description: "See how to remove the display toggle from a report or chart do stop users from switching between chart visualisations and the data table.",
+    img_url:"../assets/img/report_thumb/remove_toggle.PNG",
+    page_url:"../report_embedding/content/remove_toggle.html",   
 }
 ];
 let cardContainer;
