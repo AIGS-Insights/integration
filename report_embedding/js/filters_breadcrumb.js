@@ -22,7 +22,10 @@ function createBreadcrumb(breadcrumbElement, report) {
         filter.addEventListener('changed', function(event) {
             element.classList.addClass('updated');
         });
-        
+        filter.addEventListener('applied', function(event) {
+            element.classList.removeClass('updated');
+            element.querySelector('.filterValues').innerText = getDisplayValue(filter);	
+        })
         //Finally append the filter element to the breadcrumb element
         breadcrumbElement.appendChild(element);
     });
