@@ -90,13 +90,13 @@
           <script>
             yellowfin.init().then(() => {
                 yellowfin.loadReport({
-                        reportId: 'd2e34348-eb72-49e7-962c-6ca2b601276c',
+                        reportId: '410ba1a1-f254-4cbe-b4f4-e4b24270440a',
                         element:document.querySelector('div#report2'),
                         displayType:"REPORT",
                         showToolbar: false
                     })
                     yellowfin.loadReport({
-                        reportId: 'd2e34348-eb72-49e7-962c-6ca2b601276c',
+                        reportId: '410ba1a1-f254-4cbe-b4f4-e4b24270440a',
                     }).then(report => {		
                         let fields = report.getFieldsInDatasetOrder();
                         report.sortAscending(fields[0].id);
