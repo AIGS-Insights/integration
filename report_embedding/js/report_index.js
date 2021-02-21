@@ -41,6 +41,12 @@ var tasks = [
     img_url:"../assets/img/report_thumb/filter_breadcrumb.PNG",
     page_url:"../report_embedding/content/filter_breadcrumb.html",   
 },
+{
+    title: "Create a custom table from report data",
+    description: "Create you own table from a report dataset which allows you to fully stylise your output.",
+    img_url:"../assets/img/report_thumb/custom_table.PNG",
+    page_url:"../report_embedding/content/custom_table.html",   
+},
 ];
 let cardContainer;
 
