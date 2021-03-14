@@ -2,7 +2,7 @@ var tasks = [
 {
     title: "D3 - Lollipop Chart",
     description: "",
-    img_url:"../assets/img/js_charts/GlobexCorp.PNG",
+    img_url:"../assets/img/js_charts/d3_lollipop.PNG",
     page_url:"../js_charts/content/d3_lollipop.html",   
 },
 {
