@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Yellowfin BI | Report Embedding</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../../css/styles.css" rel="stylesheet" />
+        <link href="../css/report.css" rel="stylesheet" />
+        <link rel="icon" href="https://yellowfin-cdn.yellowfinbi.com/assets/themes/yellowfin/library/images/icons/cropped-YF_18_FAVx512px-32x32.png" sizes="32x32" />
+      
+    </head>
+    <body id="page-top">
+        <style>
+        .embed_container{width:100%; margin:auto;}
+        .button-group button{margin:2px;} 
+        .button-group{margin: auto;width: 21%;padding: 10px;} 
+        div#report1{display: block;min-height: 350px; margin: 4%;}   
+        div.report{width: 100%;margin: auto;margin-top: -5%;}
+        
+        
+        </style>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img style="max-height: 46px;" src="https://yellowfin-cdn.yellowfinbi.com/assets/themes/yellowfin/library/images/logo-colour-dark-bg_d482a50b.svg"/></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../../report_embedding/index.html">Report Embedding</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../../dashboard_embedding/index.html">Dashboard Embedding</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../../code_mode/index.html">Code Mode</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../../js_charts/index.html">Javascript Charts</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../../projects/index.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../../other_code/index.html">More</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        
+        <!-- About-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">D3 - Lollipop Chart</h2>
+                        <hr class="divider light my-4" />
+                        <p class="text-white-50 mb-4"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services-->
+        <div class="container">
+               
+           <div id="report1"></div>
+           
+           
+              </div>
+          </div>
+           
+          <script src="https://yf-emea-beta.yellowfin.bi/JsAPI/v3"></script>
+          <!-- Yellowfin API Calls-->
+          <script>
+          yellowfin.init().then(() => {
+              yellowfin.loadReport({
+                  reportUUID: "c98bbf3c-7c9d-43ac-b469-dfb0c54bfbf0",
+                  displayType:"CHART",
+                  element: document.querySelector("div#report1"),
+                  showToolbar: true
+                 
+              });
+              yellowfin.loadReport({
+                  reportUUID: "c98bbf3c-7c9d-43ac-b469-dfb0c54bfbf0",
+                  displayType:"REPORT",
+                  element: document.querySelector("div#report1"),
+                  showToolbar: false
+                 
+              });
+          });
+
+          </script>
+        </section>
+        <section class="page-section bg-primary" id="about">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                      <h2 class="text-white mt-0  text-center">The code you need to do this yourself</h2>
+                      <hr class="divider light my-4" />
+                     
+                        <pre>
+                        <code>
+TBC
+                        </code>
+                      </pre>
+                      
+                  </div>
+              </div>
+          </div>
+      </section>
+        <!-- Call to action-->
+        <section class="page-section bg-dark text-white" id='portfolio'>
+            <div class="container text-center">
+                <h2 class="mb-4">Resources</h2>
+                <hr class="divider my-4" />
+                <p class="text-white-50 mb-4">Here are a series of sites that have helped me with both using and extending Yellowfin.</p>
+                    
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">Yellowfin <br> Wiki</h3>
+                            <a class="btn btn-light btn-xl" href="http://wiki.yellowfin.bi/" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">Yellowfin Community</h3>
+                            <a class="btn btn-light btn-xl" href="https://community.yellowfinbi.com/" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">Yellowfin University</h3>
+                            <a class="btn btn-light btn-xl" href="https://university.yellowfinbi.com/" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">Yellowfin Youtube</h3>
+                            <a class="btn btn-light btn-xl" href="https://www.youtube.com/user/YellowfinTeam" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">Yellowfin <br> Blog</h3>
+                            <a class="btn btn-light btn-xl" href="https://www.yellowfinbi.com/company/blog" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">MDN JS <br> Web Docs</h3>
+                            <a class="btn btn-light btn-xl" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">Font Awesome <br> Icons</h3>
+                            <a class="btn btn-light btn-xl" href="https://fontawesome.com/icons?d=gallery" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">Material <br> Design</h3>
+                            <a class="btn btn-light btn-xl" href="https://material.io/develop/web" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">Bootstrap <br> Framework</h3>
+                            <a class="btn btn-light btn-xl" href="https://getbootstrap.com/" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">Chrome <br> DevTools</h3>
+                            <a class="btn btn-light btn-xl" href="https://developers.google.com/web/tools/chrome-devtools" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container"><div class="small text-center text-muted">Copyright © 2021</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../../js/scripts.js"></script>
+     
+
+
+    </body>
+</html>
