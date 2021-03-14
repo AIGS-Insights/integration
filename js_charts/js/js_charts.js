@@ -2,13 +2,13 @@ var tasks = [
 {
     title: "D3 - Lollipop Chart",
     description: "",
-    img_url:"../assets/img/project_thumb/GlobexCorp.PNG",
+    img_url:"../assets/img/js_charts/GlobexCorp.PNG",
     page_url:"../js_charts/content/d3_lollipop.httml",   
 },
 {
     title: "Holding",
     description: "",
-    img_url:"../assets/img/project_thumb/liquorio.PNG",
+    img_url:"../assets/img/js_charts/liquorio.PNG",
     page_url:"../projects/content/liquorio.html",   
 }
 ];
