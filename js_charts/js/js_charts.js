@@ -1,9 +1,9 @@
 var tasks = [
 {
-    title: "Holding",
+    title: "D3 - Lollipop Chart",
     description: "",
     img_url:"../assets/img/project_thumb/GlobexCorp.PNG",
-    page_url:"../projects/content/globexcorp.html",   
+    page_url:"../js_charts/content/d3_lollipop.httml",   
 },
 {
     title: "Holding",
