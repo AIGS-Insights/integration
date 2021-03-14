@@ -180,8 +180,11 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: #d6370c;
-  text-decoration: underline;
+  text-decoration: none;
+}
+a.areas_link:hover div svg {
+  text-decoration: none !important;
+  filter: drop-shadow(2px 2px 3px #4b4b4b);
 }
 a.areas_link {
   color: currentcolor;
