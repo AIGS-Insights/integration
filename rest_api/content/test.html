@@ -35,6 +35,7 @@
 			'Authorization': 'YELLOWFIN ts=' + new Date().getTime() + ', nonce=1233333333',
 			"Accept": 'application/vnd.yellowfin.api-v1.2+json'
 		},
+		dataType:"jsonp",
 		success: function (res, textStatus, jqXHR) {
 			securityToken = res.securityToken;
 			let url = 'https://yf-emea-beta.yellowfin.bi/JsAPI/v3?token=' + securityToken;
