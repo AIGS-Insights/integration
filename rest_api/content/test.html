@@ -1,0 +1,65 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div id="reportDiv" style=" width: 1000px; height: 1000px"></div>
+	<script>
+	var authUserId = 'nathan.goddard@yellowfin.bi';
+	var authUserPass = 'goddard1989';
+	var adminId = 'nathan.goddard@yellowfin.bi';
+	var adminPassword = 'goddard1989';
+
+	var body = {
+		signOnUser: {
+			userName: authUserId,
+			password: authUserPass,
+			
+		},
+		noPassword: true,
+		adminUser: {
+			userName: adminId,
+			password: adminPassword
+		}
+	};
+	//encode to JSON
+	var json_text = JSON.stringify(body);
+
+	$.ajax({
+		type: 'POST',
+		contentType: "application/json",
+		data: json_text,
+		crossDomain: true,
+		url: "https://yf-emea-beta.yellowfin.bi/api/rpc/login-tokens/create-sso-token",
+		headers: {
+			'Authorization': 'YELLOWFIN ts=' + new Date().getTime() + ', nonce=1233333333',
+			"Accept": 'application/vnd.yellowfin.api-v1.2+json'
+		},
+		success: function (res, textStatus, jqXHR) {
+			securityToken = res.securityToken;
+			let url = 'https://yf-emea-beta.yellowfin.bi/JsAPI/v3?token=' + securityToken;
+			let tp = 'text/javascript';
+			let sc = document.createElement('script');
+			sc.src = url;
+			sc.type = tp;
+			document.body.appendChild(sc);
+
+			setTimeout(function () {
+				yellowfin.showLoginPrompt = false;
+				yellowfin.init().then(() => {
+					yellowfin.loadReport({
+						reportUUID: 'df41eb4c-d90b-42ac-bdc1-fce7e4b48fe',
+						element: 'reportDiv'
+					});
+				});
+			}, 1000);
+
+		},
+		error: function (responseData, textStatus, errorThrown) {
+			alert("error!");
+		}
+	});
+
+	</script>
+
+</body>
