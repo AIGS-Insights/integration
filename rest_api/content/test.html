@@ -27,8 +27,8 @@
 
 	$.ajax({
 		type: 'POST',
-		xhrFields: {
-        withCredentials: true
+		beforeSend: function (jqxhr) {
+        jqxhr.withCredentials = true; // This doesn't work
     	},
 		contentType: "application/json",
 		data: json_text,
