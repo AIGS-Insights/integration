@@ -5,8 +5,8 @@
 <body>
 	<div id="reportDiv" style=" width: 1000px; height: 1000px"></div>
 	<script>
-	var authUserId = 'nathan.goddard@yellowfin.bi';
-	var authUserPass = 'goddard1989';
+	var authUserId = 'integration@testing.com';
+	var authUserPass = 'G0dd@rd1989';
 	var adminId = 'nathan.goddard@yellowfin.bi';
 	var adminPassword = 'goddard1989';
 
@@ -27,6 +27,9 @@
 
 	$.ajax({
 		type: 'POST',
+		xhrFields: {
+        withCredentials: true
+    	},
 		contentType: "application/json",
 		data: json_text,
 		crossDomain: true,
