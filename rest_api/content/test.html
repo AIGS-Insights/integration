@@ -27,12 +27,8 @@
 
 	$.ajax({
 		type: 'POST',
-		beforeSend: function (jqxhr) {
-        jqxhr.withCredentials = true; // This doesn't work
-    	},
 		contentType: "application/json",
 		data: json_text,
-		crossDomain: true,
 		url: "https://yf-emea-beta.yellowfin.bi/api/rpc/login-tokens/create-sso-token",
 		headers: {
 			'Authorization': 'YELLOWFIN ts=' + new Date().getTime() + ', nonce=1233333333',

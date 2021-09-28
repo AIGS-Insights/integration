@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+.form{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: auto;
+    margin-top: 4%;
+    height: auto;
+    border-radius: 50px;
+    background: #f5f5f5;
+    box-shadow:  20px 20px 60px #d0d0d0,-20px -20px 60px #ffffff;
+    padding: 2em;
+}
+.form_container{
+    width: 100%;
+    display: block;
+}
+input#CompanyName{width:100%;}
+.col-md-12 {
+    min-height: 75px;
+}
+</style>
+    
+<div class="form_container">
+    <div class="form">
+        <div class="col-md-12">
+            <label for="CompanyName">Company Name:</label>
+            <input type="text" id="CompanyName" name="CompanyName" placeholder="Please Enter Company Name">
+        </div>
+        <div class="col-md-12">    
+            <p>Project Type:</p>
+            <input type="radio" id="LaunchPad" name="projectType" value="Launchpad">
+            <label for="LaunchPad">Launchpad</label>
+            <input type="radio" id="POC" name="projectType" value="POC">
+            <label for="POC">POC</label>
+        </div> 
+        <div class="col-md-12">    
+            <p>Installation Environment:</p>
+            <select name="inst_env" id="inst_env">
+                <option value="Windows">Windows</option>
+                <option value="Linux">Linux</option>
+                <option value="Docker">Docker</option>
+            </select>
+        </div> 
+        <button id="submit" class="btn btn-success">Export to  PDF</button>
+
+        <div class="container">
+            <h2>Simple Collapsible</h2>
+            <p>Click on the button to toggle between showing and hiding content.</p>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+            <div id="demo" class="collapse">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+          
+        
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+    <script>
+    var today = new Date();
+    var date = today.getDate()+''+(today.getMonth()+1)+''+today.getFullYear();
+    let HtmlContent = ""; 
+    let HtmlHeader ="<div id='content' style='font-family: Tahoma, sans-serif;'>";
+    let HtmlFooter = "</div>";
+    let HtmlForPDF ="";
+
+    let CompanyName = "";
+    let ProjectType = "" ; 
+    let inst_env = ""; 
+    
+
+
+    var doc = new jsPDF(); 
+    var specialElementHandlers = { 
+        '#editor': function (element, renderer) { 
+            return true; 
+        } 
+    };
+    $('#submit').click(function () { 
+        CompanyName = document.getElementById('CompanyName').value;
+        ProjectType = $('input[name=projectType]:checked').val(); 
+        HtmlContent = "<h1>"+CompanyName+" - "+ProjectType+" Guide</h1><p>Thank for using the documentation generator, this document has been created to provide links to Yellowfin resources specifically for your "+ProjectType+ " project.</p>";
+        inst_env = $('#inst_env').find(":selected").text();
+
+        if(inst_env == 'Windows'){
+            HtmlContent += "<p>You have selected a "+inst_env+" environment to install Yellowfin</p><p>You will need to review the http://yellowfin.com</p>";
+        }else if(inst_env == 'Linux'){
+            HtmlContent += "<p>You have selected a "+inst_env+" environment to install Yellowfin</p><p>You will need to review the LINUX PAGE LINK HERE</p>";
+        }else if(inst_env == 'Docker'){
+            HtmlContent += "<p>You have selected a "+inst_env+" environment to install Yellowfin</p><p>You will need to review the DOCKER PAGE LINK HERE</p>";
+        }
+        
+        
+        
+        
+        
+        
+
+        HtmlForPDF = HtmlHeader + HtmlContent + HtmlFooter
+        console.log();
+        
+       doc.fromHTML(HtmlForPDF, 15, 15, { 
+            'width': 190, 
+                'elementHandlers': specialElementHandlers 
+        }); 
+        doc.save(CompanyName+'_'+ProjectType+'_docu_guide_'+date+'.pdf'); 
+    });
+    
+    </script>
+
+
+</body>
+</html>
+
+
+
+
