@@ -3,7 +3,7 @@ const secret = "G7yJCK6yhRb9fEKN";
 var objPeople = [
   {
       username: 'user1@yftesting.com',
-      password: 'U2FsdGVkX18OabRu2EOhvNycO8n86FUUZJS2c8JzZFQ='
+      password: 'U2FsdGVkX18OabRu2EOhvNycO8n86FUUZJS2c8JzZFQ=' //123
   },
   {
       username: 'user2@yftesting.com',
