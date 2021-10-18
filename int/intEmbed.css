@@ -6,20 +6,30 @@ body {
   padding: 0;
   background: linear-gradient(to right, #00467f, #a5cc82);
 }
-
-.container {
-  position: relative;
+.row {
+  margin: 1rem 0rem 1rem 0rem;
+}
+#menu-nav {
   width: 100%;
-  height: 100%;
+  height: 5rem;
+  border-radius: 10px;
+  background: #f5f3ff !important;
+  filter: drop-shadow(2px 4px 6px #f5f3ff);
 }
 
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  padding: 3%;
+div#report1,
+div#report2,
+div#report3,
+div#report4,
+div#report5,
+div#report6,
+div#report7,
+div#report8,
+div#report9 {
+  min-height: 400px;
+}
+app-report {
   border-radius: 10px;
-  background: #fafafa;
-  min-width: 90%;
+  background: #f5f3ff !important;
+  filter: drop-shadow(2px 4px 6px #f5f3ff);
 }

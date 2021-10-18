@@ -6,6 +6,13 @@ var JSAPIString;
 var loadAPIscript;
 var report1;
 var report2;
+var report3;
+var report4;
+var report5;
+var report6;
+var report7;
+var report8;
+var report9;
 var filters;
 
 function getRefreshToken() {
@@ -27,6 +34,7 @@ function getRefreshToken() {
       
       $.ajax(refreshRequest).done(function (response) {
         RefreshToken = response.securityToken
+       // console.log(RefreshToken);
         return;
       });
 };
@@ -45,7 +53,7 @@ function getAccessToken(token) {
       };
       
       $.ajax(accessRequest).done(function (response) {
-        //console.log('accesstoken = '+response.securityToken);
+      //  console.log('accesstoken = '+response.securityToken);
         AccessToken = response.securityToken;
         return;
       });
@@ -72,7 +80,7 @@ function getLoginToken(token) {
       };
       
       $.ajax(loginRequest).done(function (response) {
-       // console.log('logintoken = '+response.securityToken);
+      // console.log('logintoken = '+response.securityToken);
        LoginToken = response.securityToken;
         return;
       });
@@ -83,7 +91,7 @@ function firstFunction(){
   getRefreshToken();
   setTimeout(function() {
     d.resolve();
-  }, 1000);
+  }, 2000);
   return d.promise();
 }
 function secondFunction(){
@@ -114,21 +122,71 @@ function reporting() {
   var d = $.Deferred();
     setTimeout(function() {
   yellowfin.init().then(() => {
-  report1 = yellowfin.loadReport({
+    report1 = yellowfin.loadReport({
+      reportUUID: "876c7d79-21a9-4561-ada7-f97eaffe1186",
+      displayType:"CHART",
+      element: document.querySelector("div#report1"),
+      showToolbar: false
+
+  })
+  report2 = yellowfin.loadReport({
+    reportUUID: "d2e34348-eb72-49e7-962c-6ca2b601276c",
+    displayType:"CHART",
+    element: document.querySelector("div#report2"),
+    showToolbar: false
+
+})
+report3 = yellowfin.loadReport({
+  reportUUID: "80162f66-b23e-4a2b-b209-497a960d96d5",
+  displayType:"CHART",
+  element: document.querySelector("div#report3"),
+  showToolbar: false
+
+})
+  report4 = yellowfin.loadReport({
           reportUUID: "c83357db-8aef-4ec7-ab72-fce34de9ee77",
          // displayType:"CHART",
-          element: document.querySelector("div#report1"),
+          element: document.querySelector("div#report4"),
           showToolbar: false
     
       })
-  report2 = yellowfin.loadReport({
+      report5 = yellowfin.loadReport({
+        reportUUID: "876c7d79-21a9-4561-ada7-f97eaffe1186",
+        displayType:"CHART",
+        element: document.querySelector("div#report5"),
+        showToolbar: false
+  
+    })
+    report6 = yellowfin.loadReport({
+      reportUUID: "d2e34348-eb72-49e7-962c-6ca2b601276c",
+      displayType:"CHART",
+      element: document.querySelector("div#report6"),
+      showToolbar: false
+  
+  })
+  report7 = yellowfin.loadReport({
+    reportUUID: "80162f66-b23e-4a2b-b209-497a960d96d5",
+    displayType:"CHART",
+    element: document.querySelector("div#report7"),
+    showToolbar: false
+  
+  })
+  report8 = yellowfin.loadReport({
         reportUUID: "df41eb4c-d90b-42ac-bdc1-fce7e4b48fe2",
        // displayType:"CHART",
-        element: document.querySelector("div#report2"),
+        element: document.querySelector("div#report8"),
         showToolbar: false
     }).then((report) => {
       report2 = report;
     });
+    report9 = yellowfin.loadReport({
+      reportUUID: "8aedc43e-0841-45da-b518-73da7602b17d",
+     // displayType:"CHART",
+      element: document.querySelector("div#report9"),
+      showToolbar: false
+  }).then((report) => {
+    report2 = report;
+  });
     });
     console.log(report2);
     d.resolve();
