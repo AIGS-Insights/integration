@@ -29,7 +29,7 @@
 		type: 'POST',
 		contentType: "application/json",
 		data: json_text,
-		url: "https://yellowfin.aigs.co.za:8443/api/rpc/login-tokens/create-sso-token",
+		url: "/api/rpc/login-tokens/create-sso-token",
 		headers: {
 			'Authorization': 'YELLOWFIN ts=' + new Date().getTime() + ', nonce=1233333333',
 			"Accept": 'application/vnd.yellowfin.api-v1.2+json'
@@ -37,7 +37,7 @@
 		
 		success: function (res, textStatus, jqXHR) {
 			securityToken = res.securityToken;
-			let url = 'https://yellowfin.aigs.co.za:8443/JsAPI/v3?token=' + securityToken;
+			let url = '/JsAPI/v3?token=' + securityToken;
 			let tp = 'text/javascript';
 			let sc = document.createElement('script');
 			sc.src = url;
